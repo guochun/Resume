@@ -1,113 +1,103 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Resume</title>
-		<link rel="stylesheet" href="./styles/main.css">
-	</head>
-	<body>
+<html lang="en">
 
-		<!--顶部导航栏-->
-		<div class="topNavBar clearfix">
-			<a href="#" class="logo" alt="logo">
-				<span class="rs">RS</span>
-				<span class="card">card</span>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Resume</title>
+	<link rel="stylesheet" href="./styles/normalize.css">
+	<link rel="stylesheet" href="./styles/util.css">
+	<link rel="stylesheet" href="./styles/main.css">
+	<script src="//at.alicdn.com/t/font_774778_ics5fptj2te.js"></script>
+</head>
+
+<body>
+	<header class="topBar">
+		<div class="topBar_inner clearfix">
+			<a href="#" class="logo">
+				<span class="logo_rs">RS</span>
+				<span class="logo_card">card</span>
 			</a>
 			<nav>
-				<ul class="clearfix ">
-					<li><a href="#">关于</a></li>
-					<li><a href="#">技能</a></li>
-					<li><a href="#">作品</a></li>
-					<li><a href="#">博客</a></li>
-					<li><a href="#">日历</a></li>
-					<li><a href="#">联系方式</a></li>
-					<li><a href="#">其他</a></li>
-				</ul>	
+				<ul class="clearfix">
+					<li>
+						<a href="#">关于</a>
+					</li>
+					<li>
+						<a href="#">技能</a>
+					</li>
+					<li>
+						<a href="#">经验</a>
+					</li>
+					<li>
+						<a href="#">博客</a>
+					</li>
+					<li>
+						<a href="#">联系</a>
+					</li>
+					<li>
+						<a href="#">其他</a>
+					</li>
+				</ul>
 			</nav>
 		</div>
-		<!--顶部导航栏关闭-->
-
-		<div class="banner" style="background-image: url(#)"></div>
-
-		<!--内容主体-->
-		<main>
-			<!--简历卡片-->
-			<div class="card">
-				<div class="summary">
-					<!--个人头像-->
-					<div class="profile">
-						<img src="#" alt="profile">
-					</div>
-					<!--个人头像关闭-->
-					<!--个人信息-->
-					<div class="content">
-							<span class="greeting">Hello</span>	
-							<h1>郭纯(PURCY)</h1>
-						    <p>前端开发工程师</p>
-						    <hr>
-						    <dl>
-						    	<dt>年龄</dt>
-						    	<dd>27</dd>
-						    	<dt>所在城市</dt>
-						    	<dd>深圳</dd>
-						    	<dt>邮箱</dt>
-						    	<dd>550738981@qq.com</dd>
-						    	<dt>手机</dt>
-						    	<dd>13510717072</dd>
-						    </dl>
-					</div>
-					<!--个人信息关闭-->
+	</header>
+	<div class="banner">
+		<div class="mask">
+		</DIV>
+	</div>
+	<main>
+		<div class="profile">
+			<div class="summary clearfix">
+				<div class="summary_avatar">
+					<img src="./img/avatar.jpg" alt="avatar">
 				</div>
-				<!--自媒体-->
-				<footer class="media">
-						<a href="#"><img src="#" alt="..."></a>
-						<a href="#"><img src="#" alt="..."></a>
-						<a href="#"><img src="#" alt="..."></a>
-						<a href="#"><img src="#" alt="..."></a>
-						<a href="#"><img src="#" alt="..."></a>
-						<a href="#"><img src="#" alt="..."></a>
-						<a href="#"><img src="#" alt="..."></a>
-				</footer>
-				<!--自媒体关闭-->
+				<div class="summary_detail">
+					<span class="sayhi">HELLO</span>
+					<H1>郭纯</H1>
+					<p>前端工程师</p>
+					<hr>
+					<dl class="clearfix">
+						<dt>年龄</dt>
+						<dd>27</dd>
+						<dt>住址</dt>
+						<dd>深圳</dd>
+						<dt>邮箱</dt>
+						<dd>550738981@qq.com</dd>
+						<dt>电话</dt>
+						<dd>135xxxxxxxx</dd>
+					</dl>
+				</div>
 			</div>
-			<!--简历卡片关闭-->
-			<a class="buttonDownLoad" href="#">下载 PDF 简历</a>
-			<p>
-				郭纯, 前端开发工程师。<br>
-				技能: 前端开发, Node.js开发, 游戏开发。
-			</p>
-		</main>	
-		<!--内容主体关闭-->
+			<footer class="media">
+				<a href="#">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-github"></use>
+					</svg>
+				</a>
 
-		<!--个人技能区块-->
-		<section>
-			<h2>个人技能</h2>
-			<ol>
-				<li>HTML 5 &amp; CSS 3</li>
-				<li>JavaScript</li>
-				<li>jQuery</li>
-				<li>Vue</li>
-				<li>React</li>
-				<li>HTTP</li>
-			</ol>
-		</section>
-		<!--个人技能区块关闭-->
-		
-		<!--作品集区块-->
-		<section>
-			<h2>作品集合</h2>
-			<nav>
-				<ol>
-					<li>所有</li>
-					<li>框架</li>
-					<li>原生JS &amp; CSS</li>
-				</ol>
-			</nav>
-			<div class="production">
-				<div class="big"></div>
-				<div class="small"></div>
-				<div class="small"></div>
-			</div>
-		</section>
-		<!--作品集区块关闭-->
-	</body>	
+				<a href="#">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-twitter"></use>
+					</svg>
+				</a>
+
+				<a href="#">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-weibo"></use>
+					</svg>
+				</a>
+
+				<a href="#">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-tian7_facebook"></use>
+					</svg>
+				</a>
+			</footer>
+		</div>
+		<a class="donwload" href="">下载PDF简历</a>
+	</main>
+</body>
+
 </html>
