@@ -43,10 +43,12 @@
 			</nav>
 		</div>
 	</header>
+
 	<div class="banner">
 		<div class="mask">
 		</DIV>
 	</div>
+
 	<main>
 		<div class="profile">
 			<div class="summary clearfix">
@@ -96,8 +98,92 @@
 				</a>
 			</footer>
 		</div>
-		<a class="donwload" href="">下载PDF简历</a>
+		<div class="downloadResumeWrapper">
+			<a class="downloadResume" href="#" target="_blank" download="resume.pdf">下载PDF简历</a>
+		</div>
+		<p class="selfIntroduction">
+			郭纯: 前端开发工程师。
+			<br> 技能: 前端开发, Node.js开发, 游戏开发。
+		</p>
 	</main>
+
+	<section class="skills">
+		<h2>个人技能</h2>
+		<ol class="clearfix">
+			<li>
+				<h3>Html &amp; Css</h3>
+				<div class="progressBar">
+					<div class="progress" style="width: 60%"></div>
+				</div>
+			</li>
+			<li>
+				<h3>JavaScript</h3>
+				<div class="progressBar" >
+					<div class="progress" style="width: 70%"></div>
+				</div>
+			</li>
+			<li>
+				<h3>jQuery</h3>
+				<div class="progressBar" >
+					<div class="progress" style="width: 65%"></div>
+				</div>
+			</li>
+			<li>
+				<h3>Vue</h3>
+				<div class="progressBar" >
+					<div class="progress" style="width: 75%"></div>
+				</div>
+			</li>
+			<li>
+				<h3>React</h3>
+				<div class="progressBar" >
+					<div class="progress" style="width: 55%"></div>
+				</div>
+			</li>
+			<li>
+				<h3>Http</h3>
+				<div class="progressBar" >
+					<div class="progress" style="width: 50%"></div>
+				</div>
+			</li>
+		</ol>
+	</section>
+
+	<section class="portfolio">
+		<h2>作品集合</h2>
+		<nav>
+			<ol class="clearfix">
+				<li id="portfolioAll">所有</li>
+				<li id="portfolioFramework">框架</li>
+				<li id="portfolioVallia">原生JS</li>
+			</ol>
+			<div id="portfolioSelect" class="selectBar state-pa">
+				<div class="bar-inner"></div>
+			</div>
+		</nav>
+		<div class="productionSet">
+			<div class="big" style="top: 0px; left: 0px">
+				<img src="./img/product_1.jpg" alt="作品">
+			</div>
+			<div class="small" style="top: 0px; left: 635px">
+				<img src="./img/product_2.jpg" alt="作品">
+			</div>
+			<div class="small" style="top: 314px; left: 635px">
+				<img src="./img/product_3.jpg" alt="作品">
+			</div>
+		</div>
+	</section>
 </body>
+<script>
+	portfolioAll.addEventListener("click", function () {
+		portfolioSelect.className = "selectBar state-pa";
+	});
+	portfolioFramework.addEventListener("click", function () {
+		portfolioSelect.className = "selectBar state-pf";
+	});
+	portfolioVallia.addEventListener("click", function () {
+		portfolioSelect.className = "selectBar state-pv";
+	});
+</script>
 
 </html>
