@@ -1,22 +1,25 @@
-body{
-    background: #efefef; 
-}
-.clearfix:after {
-    content: "";
-    display: block;
-    clear: both;   
-}
-a {
-    text-decoration: none;
-   
+body{ background: #efefef; }
+.clearfix:after { content: ""; display: block; clear: both; }
+a { text-decoration: none; }
+ul,ol{ padding: 0px; margin: 0px; list-style: none; }
+h1,h2,h3,h4,h5,h6{ font-weight: normal; }
+
+/*加载动画*/
+.loading{ width: 200px; height: 200px; position: relative; }
+.loading::before, .loading::after { content: ""; width: 0px; height: 0px; background: #000; border-radius: 50%; position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; animation: blink 1.5s  linear infinite; }
+.loading::after {animation-delay: 0.75s;}
+@keyframes blink {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+    }
 }
 
-ul,ol{
-
-    padding: 0px;
-    margin: 0px;
-    list-style: none;
-}
-h1,h2,h3,h4,h5,h6{
-    font-weight: normal;
-}
+/*所有的icon*/
+.icon {width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
