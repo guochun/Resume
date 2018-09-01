@@ -4,6 +4,23 @@ a { text-decoration: none; }
 ul,ol{ padding: 0px; margin: 0px; list-style: none; }
 h1,h2,h3,h4,h5,h6{ font-weight: normal; }
 
+
+/*欢迎界面*/
+.welcome.active {
+    display: flex;
+} 
+.welcome {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #888;
+    z-index: 1;
+}
 /*加载动画*/
 .loading{ width: 200px; height: 200px; position: relative; }
 .loading::before, .loading::after { content: ""; width: 0px; height: 0px; background: #000; border-radius: 50%; position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; animation: blink 1.5s  linear infinite; }
