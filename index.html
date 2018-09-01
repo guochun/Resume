@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="./styles/util.css">
 	<link rel="stylesheet" href="./styles/main.css">
 	<script src="//at.alicdn.com/t/font_774778_ics5fptj2te.js"></script>
+	<script src="./js/lib/Tween.js"></script>
 </head>
 
 <body>
@@ -18,31 +19,41 @@
 		<div class="loading"></div>
 	</div>
 
-	<header class="topBar">
+	<header  id="topNavBar" class="topBar">
 		<div class="topBar_inner clearfix">
 			<a href="#" class="logo">
 				<span class="logo_rs">RS</span>
 				<span class="logo_card">card</span>
 			</a>
-			<nav>
+			<nav class="menu">
 				<ul class="clearfix">
 					<li>
-						<a href="#">关于</a>
+						<a href="#siteAbout">关于</a>
 					</li>
 					<li>
-						<a href="#">技能</a>
+						<a href="#siteSkill">技能</a>
+					</li>
+					<li  >
+						<a  href="#siteWorks">作品</a>
+						<ul class="submenu">
+							<li>作品1</li>
+							<li>作品2</li>
+							<li>作品3</li>
+						</ul>
 					</li>
 					<li>
-						<a href="#">经验</a>
+						<a href="#siteBlog">博客</a>
+						<ul class="submenu">
+							<li>博客1</li>
+							<li>博客2</li>
+							<li>博客3</li>
+						</ul>
 					</li>
 					<li>
-						<a href="#">博客</a>
+						<a href="#siteTel">联系方式</a>
 					</li>
 					<li>
-						<a href="#">联系</a>
-					</li>
-					<li>
-						<a href="#">其他</a>
+						<a href="#siteOther">其他</a>
 					</li>
 				</ul>
 			</nav>
@@ -55,7 +66,7 @@
 	</div>
 
 	<main>
-		<div class="profile">
+		<div  data-navitems  id="siteAbout" class="profile offset">
 			<div class="summary clearfix">
 				<div class="summary_avatar">
 					<img src="./img/avatar.jpg" alt="avatar">
@@ -112,7 +123,7 @@
 		</p>
 	</main>
 
-	<section class="skills">
+	<section  data-navitems  id="siteSkill" class="skills offset">
 		<h2>个人技能</h2>
 		<ol class="clearfix">
 			<li>
@@ -154,7 +165,7 @@
 		</ol>
 	</section>
 
-	<section class="portfolio">
+	<section data-navitems  id="siteWorks" class="portfolio offset">
 		<h2>作品集合</h2>
 		<nav>
 			<ol class="clearfix">

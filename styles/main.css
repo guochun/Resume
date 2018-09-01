@@ -1,14 +1,39 @@
+
+/*共同局域*/
+section.skills, section.portfolio{ max-width: 930px; margin: 0px auto; margin-top: 60px;}
+section.skills>h2, section.portfolio>h2 { text-align: center; color: #3d4451; font-size: 34px; line-height: 1.2em; font-weight: 600; }
+[data-navitems].actived{ outline: 10px  solid red;}
+[data-navitems] {transform: translateY(0); transition: all 0.5s;}
+[data-navitems].offset{ transform: translateY(100px);}
+
+
 /*头部导航栏*/
-.topBar{ position: fixed; width: 100%; font-family: "Arial Black"; font-weight: bold; }
-.topBar_inner { padding: 25px 190px; }
+.topBar{  color: #B9BBBE; position: fixed; width: 100%; font-family: "Arial Black"; font-weight: bold; transition: all 0.5s; padding: 25px 0px;}
+.topBar.sticky{ background: white;  padding: 10px 0px; z-index: 1; box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); color: #3d4451;}
+.topBar_inner { padding: 0px 190px; }
 .topBar .logo { float: left; font-size: 30px; }
 .topBar .logo .logo_rs { color: #E05962; }
 .topBar .logo .logo_card { color: #919499; margin-left: -5px; }
-.topBar nav{ float: right; padding: 10px 0px; font-size: 20px; }
-.topBar nav>ul>li { float: left; margin: 0px 17.5px; position: relative; }
-.topBar nav>ul>li>a { color: #B9BBBE; padding-bottom: 5px; display: block; white-space: nowrap; text-align: center; }
-.topBar nav>ul>li>a:after { content: ""; height: 3px; width: 0%; position: absolute; left: 0px; bottom: -5px; background-color: #E05962; box-sizing: border-box; border-radius: 10px; transition: width 0.2s ease-out; }
-.topBar nav li:hover>a:after { width: 100% !important; }
+.topBar nav{ float: right; padding: 10px 0px; font-size: 16px; }
+.topBar nav>ul>li { float: left; margin: 0px 17.5px; position: relative}
+.topBar nav>ul>li>a { color: inherit; padding-bottom: 5px; display: block;  position: relative; }
+.topBar nav>ul>li>a:after { content: ""; height: 3px; width: 0%; position: absolute; left: 0px; top: 100%; background-color: #E05962; box-sizing: border-box; border-radius: 10px; transition: width 0.2s ease-out; }
+.topBar nav li.actived>a:after,
+.topBar nav li.highlight>a:after{ width: 100% !important; }
+.topBar nav .submenu{ display: none; position: absolute; right: 0; top: 100%; background: white; color:#3d4451; margin-top: 4px; box-shadow: 0 0 5px rgba(0,0,0,.5); cursor: pointer; }
+.topBar nav  li .submenu>li {white-space: nowrap;padding: 10px 25px;}
+.topBar nav li.actived .submenu {display: block;animation: subMenuSlid 0.2s ease-in}
+
+@keyframes subMenuSlid{
+	0%{
+		margin-right: 100%;
+		opacity: 0;
+	}
+	100%{
+		margin-right: 0%;
+		opacity: 1;
+	}
+}
 
 /*背景图*/
 .banner{ background-image: url(../img/bg.png); background-size: cover; background-position: center; height: 515px; }
@@ -43,11 +68,12 @@ section.skills>ol>li>h3{ font-size:14px; line-height: 1.1em; padding-right: 40px
 section.skills>ol>li { width: 50%; box-sizing: border-box; }
 section.skills>ol>li:nth-child(odd){ float: left; padding-right: 15px; }
 section.skills>ol>li:nth-child(even){ float: right; padding-left: 15px; }
-section.skills>ol>li .progressBar { height: 5px; background: #F9DEE0; border-radius: 2px; margin: 10px 0px 30px; }
-section.skills>ol>li .progress{ height: 100%; background: #E05962; width: 50%; border-radius: 2px; }
+section.skills>ol>li .progressBar { height: 5px; background: #F9DEE0; border-radius: 2px; margin: 10px 0px 30px; overflow: hidden;}
+section.skills>ol>li .progress{ height: 100%; background: #E05962; width: 50%; border-radius: 2px;  transform: translateX(0); transition: all 1s; }
+section.skills.offset>ol>li .progress{  transform: translateX(-100%); }
 
 /*作品集*/
-section.portfolio{ text-align: center; }
+section.portfolio{ text-align: center; margin-bottom: 100px;}
 section.portfolio>nav{ text-align: center; margin-bottom: 30px; display: inline-block; vertical-align: top; }
 section.portfolio>nav>ol{ display: inline-block; vertical-align: top; }
 section.portfolio>nav>ol>li{ float: left ;margin-left: 30px; cursor: pointer; }
@@ -62,7 +88,5 @@ section.portfolio>.productionSet>div{ position: absolute; box-shadow: 0 1px 6px 
 section.portfolio .productionSet> .big>img{ width: 597px; height: 600px; }
 section.portfolio .productionSet> .small>img{ width: 293px;height: 285px; }
 
-/*共同局域*/
-section.skills, section.portfolio{ max-width: 930px; margin: 0px auto; margin-top: 60px;}
-section.skills>h2, section.portfolio>h2 { text-align: center; color: #3d4451; font-size: 34px; line-height: 1.2em; font-weight: 600; }
+
 
