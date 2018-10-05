@@ -8,6 +8,7 @@ h1,h2,h3,h4,h5,h6{ font-weight: normal; }
 /*欢迎界面*/
 .welcome.active {
     display: flex;
+    z-index: 9999;
 } 
 .welcome {
     display: none;

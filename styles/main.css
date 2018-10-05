@@ -2,7 +2,7 @@
 /*共同局域*/
 section.skills, section.portfolio{ max-width: 930px; margin: 0px auto; margin-top: 60px;}
 section.skills>h2, section.portfolio>h2 { text-align: center; color: #3d4451; font-size: 34px; line-height: 1.2em; font-weight: 600; }
-[data-navitems].actived{ outline: 10px  solid red;}
+[data-navitems].actived{ outline: 10px  solid rgba(224, 72, 12, 0.6);}
 [data-navitems] {transform: translateY(0); transition: all 0.5s;}
 [data-navitems].offset{ transform: translateY(100px);}
 
@@ -73,20 +73,9 @@ section.skills>ol>li .progress{ height: 100%; background: #E05962; width: 50%; b
 section.skills.offset>ol>li .progress{  transform: translateX(-100%); }
 
 /*作品集*/
-section.portfolio{ text-align: center; margin-bottom: 100px;}
-section.portfolio>nav{ text-align: center; margin-bottom: 30px; display: inline-block; vertical-align: top; }
-section.portfolio>nav>ol{ display: inline-block; vertical-align: top; }
-section.portfolio>nav>ol>li{ float: left ;margin-left: 30px; cursor: pointer; }
-section.portfolio>nav>ol>li:first-child{ margin-left: 0px; }
-section.portfolio>nav>.selectBar{ background: white; height: 5px; border-radius: 2px; margin-top: 10px; }
-section.portfolio>nav .bar-inner{ background: #e6686a; height: 100%; border-radius: 2px; transition: all 0.3s; }
-section.portfolio>nav>.state-pa>.bar-inner{ width: 20%; margin-left: 0px; }
-section.portfolio>nav>.state-pf>.bar-inner{ width: 20%; margin-left: 60px; }
-section.portfolio>nav>.state-pv>.bar-inner{ width: 30%; margin-left: 120px;}
-section.portfolio>.productionSet{ position: relative; height: 600px; }
-section.portfolio>.productionSet>div{ position: absolute; box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
-section.portfolio .productionSet> .big>img{ width: 597px; height: 600px; }
-section.portfolio .productionSet> .small>img{ width: 293px;height: 285px; }
-
-
+section.portfolio{ text-align: center; margin-bottom: 100px; padding-bottom: 50px;}
+section.portfolio .swiper-container{ width: 600px; height: 600px;}
+section.portfolio .swiper-button {width: 64px;height: 64px;border-radius: 50%;background-color: rgba(255,255,255,.3);}
+section.portfolio .swiper-button-prev{ right: 85%; left: auto;}
+section.portfolio .swiper-button-next{right: auto; left: 85%;}
 

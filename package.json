@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/guochun/Resume#readme",
   "dependencies": {
-    "normalize.css": "^8.0.0"
+    "leancloud-storage": "^3.10.0"
   }
 }

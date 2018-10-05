@@ -8,18 +8,20 @@
 	<title>Resume</title>
 	<link rel="stylesheet" href="./styles/normalize.css">
 	<link rel="stylesheet" href="./styles/util.css">
+	<link rel="stylesheet" href="./styles/swiper.css">
 	<link rel="stylesheet" href="./styles/main.css">
 	<script src="//at.alicdn.com/t/font_774778_ics5fptj2te.js"></script>
 	<script src="./js/lib/Tween.js"></script>
+	<script src="./js/lib/swiper.js"></script>
 </head>
 
 <body>
-	
-	<div  id="welcome" class="welcome active">
+
+	<div id="welcome" class="welcome active">
 		<div class="loading"></div>
 	</div>
 
-	<header  id="topNavBar" class="topBar">
+	<header id="topNavBar" class="topBar">
 		<div class="topBar_inner clearfix">
 			<a href="#" class="logo">
 				<span class="logo_rs">RS</span>
@@ -33,8 +35,8 @@
 					<li>
 						<a href="#siteSkill">技能</a>
 					</li>
-					<li  >
-						<a  href="#siteWorks">作品</a>
+					<li>
+						<a href="#siteWorks">作品</a>
 						<ul class="submenu">
 							<li>作品1</li>
 							<li>作品2</li>
@@ -66,7 +68,7 @@
 	</div>
 
 	<main>
-		<div  data-navitems  id="siteAbout" class="profile offset">
+		<div data-navitems id="siteAbout" class="profile offset">
 			<div class="summary clearfix">
 				<div class="summary_avatar">
 					<img src="./img/avatar.jpg" alt="avatar">
@@ -123,7 +125,7 @@
 		</p>
 	</main>
 
-	<section  data-navitems  id="siteSkill" class="skills offset">
+	<section data-navitems id="siteSkill" class="skills offset">
 		<h2>个人技能</h2>
 		<ol class="clearfix">
 			<li>
@@ -165,33 +167,35 @@
 		</ol>
 	</section>
 
-	<section data-navitems  id="siteWorks" class="portfolio offset">
+	<section data-navitems id="siteWorks" class="portfolio offset">
 		<h2>作品集合</h2>
-		<nav>
-			<ol class="clearfix">
-				<li id="portfolioAll">所有</li>
-				<li id="portfolioFramework">框架</li>
-				<li id="portfolioVallia">原生JS</li>
-			</ol>
-			<div id="portfolioSelect" class="selectBar state-pa">
-				<div class="bar-inner"></div>
+		<div id='swiper'>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="./img/product_1.jpg" alt="作品">
+					</div>
+					<div class="swiper-slide">
+						<img src="./img/product_2.jpg" alt="作品">
+					</div>
+					<div class="swiper-slide">
+						<img src="./img/product_3.jpg" alt="作品">
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
 			</div>
-		</nav>
-		<div class="productionSet">
-			<div class="big" style="top: 0px; left: 0px">
-				<img src="./img/product_1.jpg" alt="作品">
-			</div>
-			<div class="small" style="top: 0px; left: 635px">
-				<img src="./img/product_2.jpg" alt="作品">
-			</div>
-			<div class="small" style="top: 314px; left: 635px">
-				<img src="./img/product_3.jpg" alt="作品">
-			</div>
+			<div class="swiper-button swiper-button-prev"></div>
+			<div class="swiper-button swiper-button-next"></div>
 		</div>
 	</section>
 
+	<script src="./js/main.js"></script>
+	<script src="./js/welcome.js"></script>
+	<script src="./js/swiperInit.js"></script>
+	<script src="./js/controllScroll.js"></script>
+	<script src="./js/stickyTopBar.js"></script>
+	<script src="./js/autoNavigator.js"></script>
+	<script src="./js/navigatorMenu.js"></script>
 </body>
-
-<script src="./js/main.js"></script>
 
 </html>
