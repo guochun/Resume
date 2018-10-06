@@ -13,6 +13,7 @@
 	<script src="//at.alicdn.com/t/font_774778_ics5fptj2te.js"></script>
 	<script src="./js/lib/Tween.js"></script>
 	<script src="./js/lib/swiper.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
 </head>
 
 <body>
@@ -189,6 +190,25 @@
 		</div>
 	</section>
 
+	
+	<section  data-navitems class="message offset">
+		<h2>留言板</h2>
+		<form id='postMessageForm'>
+			<div class="inputItem">
+				<label for="name">姓名: </label>
+				<input id="name" type="text" name="name">
+			</div>
+			<div class="inputItem">
+				<label for="content">内容: </label>
+				<input id="content" type="text" name="content">
+			</div>
+			<input type="submit" value="提交">
+		</form>
+		<ol id="messageList">
+
+		</ol>
+	</section>
+
 	<script src="./js/main.js"></script>
 	<script src="./js/welcome.js"></script>
 	<script src="./js/swiperInit.js"></script>
@@ -196,6 +216,7 @@
 	<script src="./js/stickyTopBar.js"></script>
 	<script src="./js/autoNavigator.js"></script>
 	<script src="./js/navigatorMenu.js"></script>
+	<script src="./js/message.js"></script>
 </body>
 
 </html>
